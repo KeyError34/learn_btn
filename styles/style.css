@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("/images/Matrix_NoSpoon1.jpg"); /* Замена на путь к изображению */
+  background-size: cover; /* Масштабируем изображение, чтобы оно занимало всю доступную область */
+  background-position: center; /* Центрируем изображение */
+  background-repeat: no-repeat; /* Запрещаем повторение изображения */
+}
+h1 {
+  text-shadow: 2px 2px 2px rgba(177, 75, 75, 0.5); /*Этот код добавляет тень тексту с 
+    горизонтальным и вертикальным смещением в 2 пикселя и радиусом
+    размытия 2 пикселя. Цвет тени задается в формате RGBA, 
+    где последнее значение (0.5) указывает на прозрачность (от 0 до 1).*/
+  font-size: 25px;
+  color: red;
+}
+.container {
+  margin-top: 20%;
+  margin-left: 40%;
+  display: flex; /* Устанавливаем гибкий контейнер */
+  flex-direction: column; /* Меняем главную ось  */
+  justify-content: space-around; /* Делаем равноценные отступы*/
+  align-items: center; /* Центрируем по главной оси */
+  position: relative; /* Задаём контейнеру статус относительного позиционирования */
+  width: 320px;
+  height: 300px;
+  background-color: rgb(142, 230, 193);
+  border: 2px solid rgb(95, 7, 7);
+  
+}
+
+.runaway_btn {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 50%; /* Расположение по вертикали в центре */
+  /*left: 50%; Расположение по горизонтали в центре, не требуется если отцентрировано flex */
+  /*transform: translate(-50%, -50%);  Смещение на половину ширины и высоты, не требуется если отцентрировано flex */
+  padding: 10px 18px; /* Внутренние отступы */
+  background-color: rgb(68, 121, 142);
+  color: rgb(205, 221, 227);
+  border: none; /* Убираем границу */
+  cursor: pointer;
+  transition: top 0.6s, left 0.6s; /* Анимация перехода для top и left */
+}
+
+.runaway_btn:hover {
+  top: 0%; /* Новое положение по вертикали */
+  left: 20%; /* Новое положение по горизонтали */
+}
+
+.stay_btn {
+  text-decoration: none; /* Убираем подчёркивание ссылки */
+  padding: 10px 10px; /* Внутренние отступы */
+  background-color: rgb(227, 87, 87); /* Цвет фона */
+  color: rgb(224, 202, 202); /* Цвет текста */
+  border: none; /* Убираем границу */
+  cursor: pointer; /* Изменяем указатель мыши */
+}
+
+.stay_btn:hover {
+  background-color: rgb(254, 6, 6);
+}
+.stay_btn:hover::before {
+  content: "If ";
+}
+.stay_btn:hover::after {
+  content: ". Here's the Red Pill";
+}
